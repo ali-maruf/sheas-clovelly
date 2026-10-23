@@ -1,0 +1,10 @@
+{
+  "_note": "Highlights only. The full menu lives at menuUrl. Add descriptions or prices only from the real menu.",
+  "menuUrl": "https://www.sheas.com.au/our-menu",
+  "intro": "Pub classics made with traditional Irish recipes and locally sourced ingredients.",
+  "onThePass": [
+    { "id": "breakfast", "name": "The breakfast plate", "category": "Breakfast", "plate": "breakfast" },
+    { "id": "benedict", "name": "Eggs benedict", "category": "Breakfast", "plate": "benedict" },
+    { "id": "steak", "name": "The steak", "category": "Steaks", "plate": "steak" }
+  ]
+}

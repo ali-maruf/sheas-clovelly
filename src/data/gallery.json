@@ -1,0 +1,10 @@
+{
+  "_note": "Drop photos into /public/assets/gallery/ using these filenames. Until then a styled placeholder is shown.",
+  "items": [
+    { "id": "food", "src": "/assets/gallery/food.jpg", "title": "From the kitchen", "caption": "Pub classics" },
+    { "id": "terrace", "src": "/assets/gallery/terrace.jpg", "title": "The terrace", "caption": "Outdoor seating" },
+    { "id": "music", "src": "/assets/gallery/live-music.jpg", "title": "Live music", "caption": "Nights at Shea's" },
+    { "id": "match", "src": "/assets/gallery/match-day.jpg", "title": "Match days", "caption": "Sport on the screens" },
+    { "id": "bar", "src": "/assets/gallery/bar.jpg", "title": "The bar", "caption": "Pull up a stool" }
+  ]
+}

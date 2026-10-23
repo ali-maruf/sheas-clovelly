@@ -1,0 +1,303 @@
+@import '@fontsource-variable/fraunces/index.css';
+@import '@fontsource-variable/inter/index.css';
+@import './styles/tokens.css';
+@import 'tailwindcss';
+
+@theme {
+  --color-green-950: #0f2a20;
+  --color-green-800: #18402f;
+  --color-green-600: #2e6b4e;
+  --color-brass-500: #c9a45c;
+  --color-brass-300: #e2c891;
+  --color-stout-900: #120e0b;
+  --color-cream-50: #f6f0e1;
+  --color-cream-200: #e8dcc0;
+  --color-muted-dark: #c7c0ad;
+  --color-muted-light: #4a4136;
+  --font-display: 'Fraunces Variable', 'Fraunces', Georgia, serif;
+  --font-sans: 'Inter Variable', 'Inter', system-ui, -apple-system, sans-serif;
+  --breakpoint-3xl: 1920px;
+}
+
+html {
+  background: var(--green-950);
+  color: var(--ink-on-dark);
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+}
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--green-950);
+  color: var(--ink-on-dark);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+::selection {
+  background: var(--brass-500);
+  color: var(--stout-900);
+}
+:focus-visible {
+  outline: 2px solid var(--brass-500);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-variation-settings: 'SOFT' 50, 'WONK' 0;
+}
+
+/* Typographic scale */
+.h-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.6rem, 7.2vw, 6.5rem);
+}
+.h-section {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  font-size: clamp(2.1rem, 5vw, 4.4rem);
+}
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--brass-500);
+}
+.on-light .eyebrow {
+  color: #7a5c22;
+}
+
+/* Brass hairline */
+.hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brass-500) 20%, var(--brass-500) 80%, transparent);
+  opacity: 0.55;
+}
+
+/* Celtic knot texture at 4% */
+.celtic {
+  position: relative;
+  isolation: isolate;
+}
+.celtic::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url('/assets/celtic-knot.svg');
+  background-size: 140px 140px;
+}
+.on-light.celtic::before {
+  filter: invert(1);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 48px;
+  padding: 0 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition:
+    transform 300ms var(--ease-pour),
+    background-color 300ms var(--ease-pour),
+    color 300ms var(--ease-pour),
+    box-shadow 300ms var(--ease-pour);
+  will-change: transform;
+}
+.btn:active {
+  transform: translateY(1px) scale(0.99);
+}
+.btn-brass {
+  background: var(--brass-500);
+  color: var(--stout-900);
+  box-shadow: 0 10px 30px -12px rgba(201, 164, 92, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.btn-brass:hover {
+  background: var(--brass-300);
+}
+.btn-ghost {
+  color: var(--cream-50);
+  box-shadow: inset 0 0 0 1px rgba(201, 164, 92, 0.55);
+}
+.btn-ghost:hover {
+  background: rgba(201, 164, 92, 0.12);
+}
+.on-light .btn-ghost {
+  color: var(--stout-900);
+  box-shadow: inset 0 0 0 1px rgba(18, 14, 11, 0.35);
+}
+.on-light .btn-ghost:hover {
+  background: rgba(18, 14, 11, 0.06);
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--brass-500);
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+  transition: background-size 400ms var(--ease-pour);
+  padding-bottom: 2px;
+}
+.link-arrow:hover {
+  background-size: 100% 1px;
+}
+.on-light .link-arrow {
+  color: #7a5c22;
+}
+
+/* Glass header */
+.glass {
+  background: rgba(15, 42, 32, 0.72);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+
+/* Pinned chapter scaffold: tall section, sticky stage */
+.pin-section {
+  position: relative;
+}
+.pin-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+}
+
+/* Pour reveal: body rises, head settles */
+.pour-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity var(--dur-settle) var(--ease-settle),
+    transform var(--dur-settle) var(--ease-pour);
+}
+.pour-in.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Beer-mat flip */
+.mat {
+  perspective: 1200px;
+}
+.mat-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1100ms var(--ease-settle);
+}
+.mat.is-flipped .mat-inner {
+  transform: rotateY(180deg);
+}
+.mat-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.mat-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+}
+
+/* Hide scrollbar on horizontal tracks */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes steam {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-60px) scaleX(1.6);
+    opacity: 0;
+  }
+}
+@keyframes glint {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes pulse-dot {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(120, 200, 150, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(120, 200, 150, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .pour-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

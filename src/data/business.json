@@ -1,0 +1,32 @@
+{
+  "name": "Shea's Clovelly",
+  "tagline": "Come for the food, stay for the craic",
+  "address": {
+    "street": "211 & 213 Clovelly Road",
+    "locality": "Clovelly",
+    "region": "NSW",
+    "postcode": "2031",
+    "country": "AU",
+    "full": "211 & 213 Clovelly Road, Clovelly NSW 2031"
+  },
+  "phone": {
+    "display": "+61 414 428 339",
+    "local": "0414 428 339",
+    "href": "tel:+61414428339"
+  },
+  "links": {
+    "menu": "https://www.sheas.com.au/our-menu",
+    "giftCards": "https://order.toasttab.com/egiftcards/sheas-211-clovelly-road",
+    "instagram": "https://www.instagram.com/sheasclovelly/",
+    "facebook": "https://www.facebook.com/sheasbarandrestaurant/",
+    "directions": "https://www.google.com/maps/dir/?api=1&destination=211+Clovelly+Road,+Clovelly+NSW+2031",
+    "mapEmbed": "https://maps.google.com/maps?q=211+Clovelly+Road,+Clovelly+NSW+2031&z=16&output=embed"
+  },
+  "reservations": "Bookings by phone. Sundays are walk-ins only.",
+  "loaf": {
+    "price": "$14",
+    "phoneLocal": "0414 428 339",
+    "href": "tel:+61414428339"
+  },
+  "googleRating": "{{GOOGLE_RATING}}"
+}

@@ -1,0 +1,10 @@
+{
+  "googleRating": "{{GOOGLE_RATING}}",
+  "reviews": [
+    { "id": 1, "quote": "{{REVIEW_1}}", "author": "", "source": "Google" },
+    { "id": 2, "quote": "{{REVIEW_2}}", "author": "", "source": "Google" },
+    { "id": 3, "quote": "{{REVIEW_3}}", "author": "", "source": "Google" },
+    { "id": 4, "quote": "{{REVIEW_4}}", "author": "", "source": "Google" },
+    { "id": 5, "quote": "{{REVIEW_5}}", "author": "", "source": "Google" }
+  ]
+}

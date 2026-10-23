@@ -1,0 +1,13 @@
+{
+  "_placeholder": "{{WEEKLY_EVENTS}}",
+  "_note": "Replace each day's `events` with real entries, e.g. { \"title\": \"Live music\", \"time\": \"7pm\", \"kind\": \"music\" }. kind: music | trivia | sport | other. Leave [] for no event.",
+  "days": [
+    { "day": "Monday", "events": [] },
+    { "day": "Tuesday", "events": [] },
+    { "day": "Wednesday", "events": [] },
+    { "day": "Thursday", "events": [] },
+    { "day": "Friday", "events": [] },
+    { "day": "Saturday", "events": [] },
+    { "day": "Sunday", "events": [], "walkInsOnly": true }
+  ]
+}

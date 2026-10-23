@@ -1,0 +1,30 @@
+/* Shea's brand tokens. Single source of truth for colour, type and motion. */
+:root {
+  --green-950: #0f2a20;
+  --green-800: #18402f;
+  --green-600: #2e6b4e;
+  --brass-500: #c9a45c;
+  --brass-300: #e2c891;
+  --stout-900: #120e0b;
+  --cream-50: #f6f0e1;
+  --cream-200: #e8dcc0;
+  --white: #ffffff;
+
+  /* Text on dark meets AA against --green-950 and --stout-900 */
+  --ink-on-dark: #f6f0e1;
+  --muted-on-dark: #c7c0ad;
+  /* Text on cream meets AA against --cream-50 */
+  --ink-on-light: #120e0b;
+  --muted-on-light: #4a4136;
+
+  --font-display: 'Fraunces Variable', 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* "The perfect pour": slow body, patient settle */
+  --ease-pour: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-settle: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-settle: 900ms;
+
+  --header-h: 68px;
+  --mobilebar-h: 72px;
+}
